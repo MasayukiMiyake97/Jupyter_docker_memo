@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+    jupyter:
+        image: sys-ope/notebook:1.0
+        ports:
+            - 8888:8888
+        environment:
+            TZ: JST-9
+            HOST_HOSTNAME: "${HOSTNAME}"
+            hostname: "${HOSTNAME}"
+            PASSWORD: test001
+        volumes:
+            - ./ansible:/etc/ansible/
+            - ./.ssh:/home/bit_kun/.ssh/
+            - ./notebooks:/notebooks
+        logging:
+          driver: journald
+
