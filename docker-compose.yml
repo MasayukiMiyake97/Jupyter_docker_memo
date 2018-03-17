@@ -9,7 +9,7 @@ services:
             TZ: JST-9
             HOST_HOSTNAME: "${HOSTNAME}"
             hostname: "${HOSTNAME}"
-            PASSWORD: test001
+            PASSWORD: xxxxxx
         volumes:
             - ./ansible:/etc/ansible/
             - ./.ssh:/home/bit_kun/.ssh/
